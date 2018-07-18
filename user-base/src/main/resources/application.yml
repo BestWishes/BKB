@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: user-base
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/bkb?useUnicode=true&characterEncoding=UTF-8
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: root
+server:
+  port: 2001
+
+mybatis-plus:
+  type-aliases-package: com.bkb.entity
+  global-config:
+    db-config:
+      field-strategy: not_null
+      column-underline: true
+      id-type: auto
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+  mapper-locations: classpath:/com/bkb/userbase/mapper/xml/*Mapper.xml

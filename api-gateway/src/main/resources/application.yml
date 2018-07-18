@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: api-gateway
+
+
+server:
+  port: 1002
+zuul:
+  routes:
+    user-base:
+      path:/user-base/**
+      serviceId=user-base
+      sensitiveHeaders: Cookie,Set-Cookie,Authorization
+
+
+
+
+
